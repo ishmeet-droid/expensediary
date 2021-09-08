@@ -39,14 +39,9 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   final List<Transaction> userTransaction = [
-    // Transaction(
-    //     id: 't1', amount: 1400.00, title: 'Pizza', date: DateTime.now()),
-    // Transaction(id: 't2', amount: 1200.00, title: 'Bag', date: DateTime.now()),
+
   ];
-// List<Transaction> get recentTransactions{
-//   return userTransaction;
-//
-// }
+
 
   void addNewTransactions( String txTitle,
      double txAmount,
@@ -88,42 +83,14 @@ void deleteTransaction(String id){
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // drawer: Drawer(
-      //   child: Center(
-      //       child: Text("hii !!! :)"
-      //       )
-      //   ),
-      // ),
+
       appBar: AppBar(
-        title: Text('Expense Tracker'),
-      //   actions: <Widget>[
-      //     IconButton(
-      //         icon: Icon(
-      //           Icons.add,
-      //         ),
-      //         onPressed: () => startAddNewTransaction(context))
-      //   ],
+        title: Text('Expense Tracker')
       ),
+
       body: ListView(
         children: <Widget>[
-          // body:
-          // Container(
-          //   width: double.infinity,
-          //     height: 100,
-          //    child:
-          // Column(
-          //       children: [
-          // Container(
-          //   width: double.infinity,
-          //   height: 100,
-          //   child: Card(
-          //     child: Center(child: Text('CHART!!')),
-          //     color: Colors.white,
-          //     elevation: 7.5,
-          //     shadowColor: Color.fromARGB(255, 232, 11, 218),
-          //   ),
-          // ),
-        //  Chart(recentTransactions),
+
           TransactionList(userTransaction,deleteTransaction),
         ],
       ),
